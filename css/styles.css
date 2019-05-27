@@ -1,0 +1,145 @@
+:root {
+  --red: #dd0b2d;
+  --border: #88061c;
+  --dark: #131b23;
+  --white: #fff;
+  --grey: #e6e6e6;
+  --lightblue: #add8e6;
+  --green: #51ae5f;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background: var(--dark);
+  font-family: "Roboto", sans-serif;
+}
+.container-left,
+.container-right {
+  width: 30vw;
+  height: 95vh;
+  background: var(--red);
+  border: 10px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-title {
+  color: var(--white);
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 10px;
+  margin-bottom: 0;
+}
+
+.line {
+  width: 50px;
+  border: 3px solid var(--dark);
+  margin-bottom: 20px;
+}
+
+.display-pokemon {
+  width: 80%;
+  height: 40%;
+  background: var(--lightblue);
+  border: 10px solid var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.name-pokemon {
+  margin-bottom: none;
+  padding: none;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: var(--dark);
+}
+
+.img-pokemon {
+  box-sizing: border-box;
+  margin: none;
+  padding: none;
+}
+
+.info-title {
+  letter-spacing: 5px;
+  color: var(--grey);
+  margin-bottom: 5px;
+}
+
+.input-pokemon {
+  border: none;
+  width: 75%;
+  padding: 10px;
+  background: var(--grey);
+  border: 3px solid var(--dark);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--dark);
+  font-size: 15px;
+}
+
+.button-search {
+  margin-top: 20px;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border: 3px solid var(--dark);
+  background: var(--green);
+  color: var(--white);
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.fa-searchengin {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+}
+
+.info-types{
+    width: 80%;
+    background: var(--grey);
+    border: 5px solid var(--dark);
+    padding: 5px;
+}
+
+.title-types{
+    margin: 0px;
+}
+
+.titles{
+  text-align: center;
+}
+
+.info-size{
+    margin: 10px;
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+}
+
+.info-weight,
+.info-height{
+    width: 50%;
+    background: var(--grey);
+    margin: 10px;
+    border: 5px solid var(--dark);
+    text-align: center;
+}
+
+.container-images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-images img{
+    width: 30%;
+}
