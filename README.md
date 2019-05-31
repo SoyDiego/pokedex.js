@@ -6,6 +6,6 @@ You can check here: [Test pokedex.js](https://codepen.io/ZeR0ByTe/full/XwYQVY).
 
 
 ## To do...  
-- Responsive Design.  
+- ~~Responsive Design.~~  
 - Add spinner.  
 - Add validation when pokemon does not exist.

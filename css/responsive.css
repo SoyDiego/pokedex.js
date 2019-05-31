@@ -1,0 +1,141 @@
+@media (min-width: 1200px) {
+
+  }
+  
+  @media (max-width: 992px) {
+
+  }
+  
+  /* Tablets (landscape) */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+    body{
+        font-size: 15px;
+        align-items: center;
+    }
+    .container-left,
+    .container-right{
+        width: 40vw;
+        height: 80vh;
+        border: 3px solid var(--border);
+    }
+
+    .display-pokemon {
+        border: 5px solid var(--dark);
+    }
+
+    .name-pokemon {
+        font-size: 20px;
+    }
+  }
+  
+  /* Tablets (portrait) */
+  @media (max-width: 768px) {
+    body{
+        font-size: 15px;
+        align-items: center;
+    }
+
+    .container-left,
+    .container-right{
+        width: 50vw;
+        height: 50vh;
+        border: 3px solid var(--border);
+    }
+
+    .display-pokemon {
+        border: 5px solid var(--dark);
+    }
+
+    .id-pokemon{
+        font-size: 18px;
+    }
+
+    .button-search {
+        padding: 10px 15px 10px 15px;
+    }
+
+    .fa-searchengin {
+        margin: 0;
+        padding: 0;
+        font-size: 25px;
+    }
+
+    .container-images img {
+        width: 25%;
+    }
+  }
+  
+  /* Smartphones (portrait) */
+  @media (max-width: 480px) {
+
+    body{
+        font-size: 12px;
+        align-items: center;
+    }
+    .container-left,
+    .container-right{
+        width: 50vw;
+        height: 50vh;
+        border: 3px solid var(--border);
+    }
+
+    .display-pokemon {
+        width: 90%;
+        border: 3px solid var(--dark);
+    }
+
+    .main-title{
+        font-size: 14px;
+    }
+
+    .id-pokemon {
+        font-size: 14px;
+    }
+
+    .name-pokemon {
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .info-title {
+        letter-spacing: 2px;
+        font-size: 12px;
+    }
+
+    .input-pokemon {
+        font-size: 10px;
+        padding: 5px;
+        border: 2px solid var(--dark);
+    }
+
+    .button-search {
+        margin-top: 15px;
+        padding: 5px 10px 5px 10px;
+    }
+
+    .fa-searchengin {
+        font-size: 25px;
+    }
+
+    .line {
+        border: 2px solid var(--dark);
+    }
+
+    .info-types {
+        width: 90%;
+        border: 3px solid var(--dark);
+        padding: 2px;
+    }
+
+    .titles {
+        font-size: 12px;
+    }
+
+    .info-weight, .info-height {
+        margin: 2px;
+        border: 2px solid var(--dark);
+        font-weight: normal;
+    }
+  }
