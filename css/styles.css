@@ -56,6 +56,10 @@ body {
   justify-content: center;
 }
 
+.spinner{
+  display: none;
+}
+
 .name-pokemon {
   margin-bottom: none;
   padding: none;

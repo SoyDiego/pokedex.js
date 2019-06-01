@@ -3,6 +3,7 @@ let inputPokemon;
 let namePokemon;
 let idPokemon;
 let picturePokemon;
+const spinner = document.querySelector('.spinner');
 
 function reload() {
     document.getElementById('search-Pokemon').addEventListener('click', searchPokemon);
@@ -14,12 +15,34 @@ function reload() {
     heightPokemon = document.getElementById('height');
 }
 
+function spinnerLoading(param) {
+    if (param === 'hide') {
+        idPokemon.style.display = 'none';
+        picturePokemon.style.display = 'none'
+        namePokemon.style.display = 'none';
+        spinner.style.display = 'block';
+
+    }else{
+        idPokemon.style.display = 'block';
+        picturePokemon.style.display = 'block'
+        namePokemon.style.display = 'block';
+        spinner.style.display = 'none';
+    }
+}
+
 function searchPokemon(e) {
     e.preventDefault();
     reload();
+    spinnerLoading('hide');
     fetch(`https://pokeapi.co/api/v2/pokemon/${inputPokemon}`)
-        .then((response) => response.json())
+        .then((response) => {
+            if (response.status === 200) {
+                return response.json();
+            }
+            throw response;
+        })
         .then((pokemon) => {
+            spinnerLoading('show');
             let name = pokemon.name;
             let id = pokemon.id;
             let picture = pokemon.sprites.front_default;
@@ -47,7 +70,25 @@ function searchPokemon(e) {
 
         })
         .catch((error) => {
-            console.log(error)
+            spinnerLoading('show');
+            if (error.status === 404) {
+                let oldId = idPokemon.innerHTML;
+                let oldName = namePokemon.innerHTML;
+                let oldPicture = document.querySelector('.img-pokemon').getAttribute('src');
+
+                idPokemon.innerHTML = 'ERROR';
+                namePokemon.innerHTML = 'DOES NOT EXIST';
+                picturePokemon.setAttribute('src', './img/emoji.png');
+
+                setInterval(() => {
+                    idPokemon.innerHTML = oldId;
+                    namePokemon.innerHTML = oldName
+                    picturePokemon.setAttribute('src', oldPicture);
+                }, 2000);
+
+                document.querySelector('.input-pokemon').value = '';
+
+            }
         })
 }
 
