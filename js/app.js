@@ -81,7 +81,7 @@ function searchPokemon(e) {
                 namePokemon.innerHTML = "DOES NOT EXIST";
                 picturePokemon.setAttribute("src", "./img/emoji.png");
 
-                setInterval(() => {
+                setTimeout(() => {
                     idPokemon.innerHTML = oldId;
                     namePokemon.innerHTML = oldName;
                     picturePokemon.setAttribute("src", oldPicture);
